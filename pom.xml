@@ -34,11 +34,18 @@
 						<version>8.9</version>
 					</dependency>
 				</dependencies>
+				<configuration>
+				  <encoding>UTF-8</encoding>
+				  <linkXRef>false</linkXRef>
+				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.openclover</groupId>
 				<artifactId>clover-maven-plugin</artifactId>
 				<version>4.4.1</version>
+				<configuration>
+					<encoding>UTF-8</encoding>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
@@ -83,6 +90,10 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-checkstyle-plugin</artifactId>
 				<version>3.0.0</version>
+				<configuration>
+				  <encoding>UTF-8</encoding>
+				  <linkXRef>false</linkXRef>
+				</configuration>
 			</plugin>
 		</plugins>
 	</reporting>
