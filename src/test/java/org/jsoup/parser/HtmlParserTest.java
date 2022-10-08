@@ -986,12 +986,14 @@ public class HtmlParserTest {
         }
 
         // Act
-        long start = System.currentTimeMillis();
+        // Commenting out this time check due to issues reported in Campuswire #427 and #524
+        // long start = System.currentTimeMillis();
         Document doc = Parser.parseBodyFragment(longBody.toString(), "");
 
         // Assert
         assertEquals(50000, doc.body().childNodeSize());
-        assertTrue(System.currentTimeMillis() - start < 1000);
+        // Commenting out this time check due to issues reported in Campuswire #427 and #524
+        // assertTrue(System.currentTimeMillis() - start < 1000);
     }
 
     @Test public void handlesDeepStack() {
@@ -1008,13 +1010,16 @@ public class HtmlParserTest {
         }
 
         // Act
-        long start = System.currentTimeMillis();
+        // Commenting out this time check due to issues reported in Campuswire #427 and #524
+        // long start = System.currentTimeMillis();
         Document doc = Parser.parseBodyFragment(longBody.toString(), "");
 
         // Assert
         assertEquals(2, doc.body().childNodeSize());
         assertEquals(25000, doc.select("dd").size());
-        assertTrue(System.currentTimeMillis() - start < 2000);
+
+        // Commenting out this time check due to issues reported in Campuswire #427 and #524
+        // assertTrue(System.currentTimeMillis() - start < 2000);
     }
 
     @Test
